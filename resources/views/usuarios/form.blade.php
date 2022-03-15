@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header"><a href="/crud/public/usuarios">Voltar</a></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -15,7 +15,7 @@
                     @endif
 
                 @if (Request::is('*/edit'))
-                <form action="/crud/public/usuarios/add" method="POST">
+                <form action="/crud/public/usuarios/{{ $usuario -> id}}/update" method="POST">
                 @csrf
                     <div class="form-group">
                         <label for="exampleInputEmail1">Name</label>
@@ -26,7 +26,7 @@
                         <input type="email" name="email" class="form-control" placeholder="Enter email" value="{{ $usuario -> email}}">
                     </div>
                 
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <button type="submit" class="btn btn-primary">Atualizar</button>
                     </form>
 
                 @else
