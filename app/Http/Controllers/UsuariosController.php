@@ -26,6 +26,6 @@ class UsuariosController extends Controller
     }
     public function edit( $id ){
         $usuario = Usuario::findOrFail ($id);
-        return view ('usuario.form', ['usuario' => $usuario]);
+        return view ('usuarios.form', ['usuario' => $usuario]);
     }
 }

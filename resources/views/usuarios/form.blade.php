@@ -16,7 +16,7 @@
 
                 @if (Request::is('*/edit'))
                 <form action="/crud/public/usuarios/add" method="POST">
-                    @csrf
+                @csrf
                     <div class="form-group">
                         <label for="exampleInputEmail1">Name</label>
                         <input type="text" name="name" class="form-control"  placeholder="Name" value="{{ $usuario -> name}}">
