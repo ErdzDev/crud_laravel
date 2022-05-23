@@ -14,6 +14,7 @@ class UsuariosController extends Controller
         $usuarios = Usuario::get ();
 
         return view('usuarios.list', ['usuarios' => $usuarios]);
+        
     }
     public function new()
     {

@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header"><a href="/crud/public/usuarios/new"> Cadastre o Usuario </a> </div>
+                <div class="card-header"><a href="usuarios/new"> Cadastre o Usuario </a> </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -36,9 +36,9 @@
                                 <a href="usuarios/{{ $u->id }}/edit" class="btn btn-info">Editar</a>
                             </td>
                             <td>
-                                <form action="usuarios/{{ $u->id }}/delete" method="post">
+                                <form action="usuarios/delete/{{ $u->id }}" method="POST">
                                 @csrf
-                                @method('delete')
+                               
                                 <button class="btn btn-danger">Deletar</button>
                                 </form>
                             </td>

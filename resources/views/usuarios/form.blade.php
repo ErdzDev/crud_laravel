@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><a href="/crud/public/usuarios">Voltar</a></div>
+                <div class="card-header"><a href="/usuarios">Voltar</a></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -15,7 +15,7 @@
                     @endif
 
                 @if (Request::is('*/edit'))
-                <form action="/crud/public/usuarios/{{ $usuario -> id}}/update" method="POST">
+                <form action="/usuarios/{{ $usuario -> id}}/update" method="POST">
                 @csrf
                     <div class="form-group">
                         <label for="exampleInputEmail1">Name</label>
@@ -30,7 +30,7 @@
                     </form>
 
                 @else
-                <form action="/crud/public/usuarios/add" method="POST">
+                <form action="/usuarios/add" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="exampleInputEmail1">Name</label>

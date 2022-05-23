@@ -3,10 +3,12 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
-
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -16,7 +18,27 @@
 
                     {{ __('You are logged in!') }}
                     <br>
-                    <a href="/crud/public/usuarios">Usuarios</a>
+                    <a href="usuarios">Usuarios</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>    
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
+                
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    {{ __('You are logged in!') }}
+                    <br>
+                    <a href="usuarios">Usuarios</a>
                 </div>
             </div>
         </div>
